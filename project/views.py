@@ -47,7 +47,7 @@ def add_header_and_footer(doc):
     # Header
     header = section.header
     header_paragraph = header.paragraphs[0]
-    header_paragraph.text = "Created by Pratham Kubetkar"
+    header_paragraph.text = "Created by Swamini Jotish Karyalay"
     header_paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     run = header_paragraph.runs[0]
     run.font.size = Pt(12)
@@ -57,7 +57,7 @@ def add_header_and_footer(doc):
     # Footer
     footer = section.footer
     footer_paragraph = footer.paragraphs[0]
-    footer_paragraph.text = f"Created by Pratham Kubetkar on {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}"
+    footer_paragraph.text = f"Created by Swamini Jotish Karyalay on {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}"
     footer_paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     run = footer_paragraph.runs[0]
     run.font.size = Pt(10)
@@ -71,7 +71,7 @@ def create_custom_page(doc):
     # paragraph = doc.add_paragraph()
     # run = paragraph.add_run()
     # run.add_picture("C:/Users/Pratham/Pictures/4217614.jpg", width=Inches(8.5), height=Inches(11))
-    doc.add_paragraph("\n\nCustom Designed Page", style="Title").alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+    doc.add_paragraph("\n\nSwamini Jotish Karyalay", style="Title").alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     content = doc.add_paragraph()
     run = content.add_run("This is a customizable page template. You can add more designs or information here.")
     run.font.size = Pt(12)
@@ -81,7 +81,7 @@ def create_custom_page(doc):
 def create_docx_from_images(images):
     try:
         doc = Document()
-        add_header_and_footer(doc)  # Add header and footer to the document
+        add_header_and_footer(doc)  
         max_width = Inches(6.5)
 
         create_custom_page(doc)
@@ -97,7 +97,7 @@ def create_docx_from_images(images):
 
         doc_stream = BytesIO()
         doc.save(doc_stream)
-        doc_stream.seek(0)  # Move the pointer to the start of the stream
+        doc_stream.seek(0)  
         return doc_stream
     except Exception as e:
         print(f"An error occurred while creating the DOCX file: {e}")
