@@ -68,9 +68,9 @@ def create_custom_page(doc):
     section = doc.sections[-1]
     section.page_height = Inches(11)
     section.page_width = Inches(8.5)
-    paragraph = doc.add_paragraph()
-    run = paragraph.add_run()
-    run.add_picture("C:/Users/Pratham/Pictures/4217614.jpg", width=Inches(8.5), height=Inches(11))
+    # paragraph = doc.add_paragraph()
+    # run = paragraph.add_run()
+    # run.add_picture("C:/Users/Pratham/Pictures/4217614.jpg", width=Inches(8.5), height=Inches(11))
     doc.add_paragraph("\n\nCustom Designed Page", style="Title").alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     content = doc.add_paragraph()
     run = content.add_run("This is a customizable page template. You can add more designs or information here.")
