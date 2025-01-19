@@ -73,7 +73,7 @@ def create_custom_page(doc):
     # run.add_picture("C:/Users/Pratham/Pictures/4217614.jpg", width=Inches(8.5), height=Inches(11))
     doc.add_paragraph("\n\nSwamini Jotish Karyalay", style="Title").alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     content = doc.add_paragraph()
-    run = content.add_run("This is a customizable page template. You can add more designs or information here.")
+    run = content.add_run("These Predictions are made by Swamini Jotish Karyalay. The predictions are based on the study of the position of planets in the sky")
     run.font.size = Pt(12)
     run.font.color.rgb = RGBColor(0, 51, 102)
 
